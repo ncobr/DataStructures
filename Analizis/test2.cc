@@ -118,7 +118,6 @@ void quickSort(vector<int> &A, int p, int r, int pivotStrategy) {
     }
 }
 
-
 vector<int> generateRandomVector(int size) {
     vector<int> randomVec(size);
     random_device rd;
@@ -131,7 +130,8 @@ vector<int> generateRandomVector(int size) {
     return randomVec;
 }
 
-SortingResult measureSortingTime(int size, bool isMergeSort,int pivotStrategy = 0) {
+SortingResult measureSortingTime(int size, bool isMergeSort,
+                                 int pivotStrategy = 0) {
     vector<double> times;
     for (int i = 0; i < 10; i++) {
         vector<int> arr = generateRandomVector(size);
